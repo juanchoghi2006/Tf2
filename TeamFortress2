@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Fortress 2: Todo lo que necesitas saber</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Imagen de fondo */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOn_ZPZ0bKhvjMeOrp5d-EA89YstrHXCrNVQ&s'); /* Cambia 'tu-imagen-de-fondo.jpg' por la URL de la imagen */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: blur(5px); /* Efecto borroso */
+        }
+
+        /* Caja central para todo el contenido */
+        .contenido {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Estilos para el título principal con fondo oscuro */
+        h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Estilos para el texto de "Selecciona un personaje" con fondo oscuro */
+        p.seleccion {
+            color: rgb(255, 28, 28);
+            font-size: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para la caja de la lista de personajes */
+        .personajes {
+            list-style: none;
+            padding: 20px;
+            border: 2px solid black;
+            display: inline-block;
+            background-color: #000000;
+            border-radius: 10px;
+            width: 350px;
+            text-align: left;
+        }
+
+        /* Estilos para los elementos de la lista con imágenes */
+        .personajes li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Estilo para las imágenes pequeñas al lado del texto */
+        .personajes img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .personajes a {
+            text-decoration: none;
+            color: #2588c9;
+            font-size: 1.5rem;
+        }
+
+        .personajes a:hover {
+            color: #e04f39;
+        }
+
+        /* Estilos para cada sección de personaje */
+        section {
+            margin-top: 50px;
+            padding: 80px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+            color: white; /* Texto blanco */
+            border-radius: 10px;
+            border: 2px solid black;
+            display: flex; /* Flexbox para alinear contenido */
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+        }
+
+        /* Nombres dentro de un cuadro */
+        section h2 {
+            color: #e04f39;
+            font-size: 2rem;
+            border: 2px solid black;
+            display: inline-block;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro más opaco */
+            border-radius: 5px;
+        }
+
+        /* Estilos para el texto alineado a la izquierda */
+        .info-text {
+            text-align: left;
+            width: 60%; /* Ocupa 60% del espacio del recuadro */
+        }
+
+        /* Estilos para la imagen del personaje a la derecha */
+        .personaje-img {
+            width: 35%; /* Ocupa 35% del espacio del recuadro */
+            max-width: 300px; /* Ajustar tamaño máximo */
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="contenido">
+        <h1>Team Fortress 2: Todo lo que necesitas saber</h1>
+
+        <p class="seleccion">Selecciona un personaje para ver más información:</p>
+
+        <ul class="personajes">
+            <li><img src="https://wiki.teamfortress.com/w/images/thumb/1/13/Icon_scout.jpg/225px-Icon_scout.jpg" alt="Scout"><a href="#scout">Scout</a></li>
+            <li><img src="https://wiki.teamfortress.com/w/images/thumb/c/c1/Icon_soldier.jpg/225px-Icon_soldier.jpg" alt="Soldier"><a href="#soldier">Soldier</a></li>
+            <li><img src="https://wiki.teamfortress.com/w/images/thumb/1/13/Icon_pyro.jpg/225px-Icon_pyro.jpg" alt="Pyro"><a href="#pyro">Pyro</a></li>
+            <li><img src="https://wiki.teamfortress.com/w/images/4/4b/Demomanava.jpg" alt="Demoman"><a href="#demoman">Demoman</a></li>
+            <li><img src="https://wiki.teamfortress.com/w/images/thumb/8/8e/Icon_heavy.jpg/225px-Icon_heavy.jpg" alt="Heavy"><a href="#heavy">Heavy</a></li>
+            <li><img src="https://wiki.teamfortress.com/w/images/e/e6/Engineerava.jpg" alt="Engineer"><a href="#engineer">Engineer</a></li>
+            <li><img src="https://wiki.teamfortress.com/w/images/thumb/f/f5/Icon_medic.jpg/225px-Icon_medic.jpg" alt="Medic"><a href="#medic">Medic</a></li>
+            <li><img src="https://wiki.teamfortress.com/w/images/4/44/Sniperava.jpg" alt="Sniper"><a href="#sniper">Sniper</a></li>
+            <li><img src="https://wiki.teamfortress.com/w/images/thumb/9/9b/Icon_spy.jpg/225px-Icon_spy.jpg" alt="Spy"><a href="#spy">Spy</a></li>
+        </ul>
+
+        <!-- Secciones para cada personaje -->
+        <section id="scout">
+            <div class="info-text">
+                <h2>Scout</h2>
+                <p>El Scout es la primer clase ofensiva del juego.  el Scout es un veloz corredor y beisbolista, que tiene dos cosas importantes, un bate de beisbol y una actitud cínica de «chúpate esa». tiene un 133% de velocidad de movimiento y 125 puntos de salud (185 con sobrecuración), siendo la clase mas rapida de todas por tierra aunque con la salud mas baja junto con el Engineer, Sniper y Spy, lo que es compensado con su gran velocidad y agilidad para entrar y salir de zonas rapidamente. Especializado en combate golpe, fuga y captura de objetivos, el Scout cuenta con un doble salto para llegar a sitios donde las demas clases no podrian llegar, puede cambiar la direccion de su segundo salto en el aire para evadir proyectiles mas facilmente. El scout tambien puede capturar puntos de control y mover la vagoneta el doble de rapido que las demas clases. Por defecto, el Scout esta armado con una escopeta (Scattergun) como arma primaria, una pistola de 12 balas como arma secundaria y un bate de beisbol como arma terciaria o cuerpo a cuerpo (CaC). </p>
+            </div>
+            <img src="https://static.wikia.nocookie.net/villains/images/9/91/Red_Scout.png/revision/latest?cb=20200427070748" alt="Scout" class="personaje-img"> <!-- Imagen a la derecha -->
+        </section>
+
+        <section id="soldier">
+            <div class="info-text">
+                <h2>Soldier</h2>
+                <p>El Soldier es la segunda clase ofensiva del juego. Cuenta con un 80% de velocidad de movimiento, siendo la segunda clase mas lenta del juego, solo superado por el Heavy. Cuenta tambien con 200 puntos de salud (300 con sobrecuración), siendo la segunda clase mas resistente, tambien, superado por el Heavy, lo cual, lo hace una clase muy buena tanto para ataque como para defensa. El Soldier esta equipado por defecto con un Lanzacohetes (Rocket launcher) de 4 cohetes como arma primaria, una escopeta (Shotgun) de 6 balas como arma secundaria, y una pala de combate como arma terciaria o cuerpo a cuerpo (CaC). Una de las habilidades que hace destacar al Soldier es el salto cohete (Rocket Jump), la cual consiste en disparar al suelo con tu lanzacohetes para salir impulsado hacia arriba o en la direccion contraria a la que disparaste, pudiendo facilmente llegar a sitios indefinidos, atacar sorpresivamente o flanquear al equipo enemigo.</p>
+            </div>
+            <img src="https://liquipedia.net/commons/images/8/89/TF_Soldier_portrait.png" alt="Soldier" class="personaje-img">
+        </section>
+
+        <section id="pyro">
+            <div class="info-text">
+                <h2>Pyro</h2>
+                <p>El Pyro es la tercer y ultima clase ofensiva del juego. El Pyro es un ser humano con obsesión por la piromanía, de origen indeterminado que solo murmura a través de una máscara que oculta una ardiente pasión por todas las cosas relacionadas con el fuego. Como se muestra en meet the pyro, el Pyro parece ser la representación de la locura y el delirio, viviendo en un mundo utópico de fantasía conocido como Pyrolandia. Cuenta con un 100% de velocidad de movimiento, y con 175 puntos de salud (260 de sobrecuración). El Pyro es una clase ideal para combates en zonas cerradas y como soporte del equipo, ademas de que es inmune a la poscombustion (fuego enemigo). Como arma primaria tiene su iconico lanzallamas, con el cual puede quemar a sus enemigos y hacer que sufran daño de quemaduras, o usar la explosion de aire comprimido (Airblast) para reflejar proyectiles o apagar a tus aliados del fuego enemigo. Como arma secundaria una escopeta de 6 balas, y como arma terciaria o cuerpo a cuerpo tiene un hacha de bombero. </p>
+            </div>
+            <img src="https://static.wikia.nocookie.net/villains/images/1/17/Red_Pyro.png/revision/latest?cb=20220713111714" alt="Pyro" class="personaje-img">
+        </section>
+
+        <section id="demoman">
+            <div class="info-text">
+                <h2>Demoman</h2>
+                <p>El Demoman es la cuarta clase del juego y la primer clase defensiva. El Demoman, es un bebedor de whisky experto en demoliciones procedente del norte de Escocia, uno de los miembros más versátiles del equipo. Cuenta con un 93% de velocidad de movimiento, 175 puntos de salud (260 con sobrecuración), especializado en negación de area y daño directo. su arma primaria es un lanzagranadas de 4 granadas, que al ser disparadas pueden rebotar por el suelo, paredes o techos, Su arma secundaria es un lanzabombas lapa, que cuenta con 8 bombas, las cuales pueden adherirse a la pared o el suelo, e incluso el demoman es capaz de hacer un salto con bomba (sticky jump), y como arma cuerpo a cuerpo posee una botella de su whisky favorito, para reventar a los enemigos que se le acerquen. </p>
+            </div>
+            <img src="https://static.wikia.nocookie.net/villains/images/c/c7/Red_Demoman.png/revision/latest?cb=20200511074123" alt="Demoman" class="personaje-img">
+        </section>
+
+        <section id="heavy">
+            <div class="info-text">
+                <h2>Heavy</h2>
+                <p>El Heavy es la segunda clase defensiva y la quinta clase del juego. El Heavy es una inmensa mole procedente de la antigua Union Sovietica. Es indiscutiblemente el rostro de Team Fortress 2, apareciendo como el más prominente en la portada del juego y demás material promocional, además de ser protagonista del primer vídeo Meet the team y aparecer en todos los siguientes hasta la fecha. Cuenta con un 77% de velocidad de movimiento, siendo este, el personaje mas lento de todo el juego, pero a la vez el mas resistente, ya que cuenta con 300 puntos de salud (450 con sobrecuración), perfecto para infligir y recibir grandes cantidades de daño. Su arma primaria se llama “Sasha”, su preciada Minigun a la cual le tiene un gran cariño, y ademas, puede infligir muchisimo daño en cadencia de corta y media distancia, su arma secundaria es una escopeta como la del soldier o el pyro, y de arma cuerpo a cuerpo posee sus propios puños para reventar cabezas.</p>
+            </div>
+            <img src="https://static.wikia.nocookie.net/villains/images/c/c2/Red_Heavy.png/revision/latest?cb=20200511074602" alt="Heavy" class="personaje-img">
+        </section>
+
+        <section id="engineer">
+            <div class="info-text">
+                <h2>Engineer</h2>
+                <p>El Engineer es la tercera y ultima clase defensiva y la 6ta clase del juego.
+                    El Engineer El Engineer es un tejano amigable, de habla suave, con una afición por todo lo mecánico. Este trata de construir y mantener construcciones que benefician a sus aliados en vez de dedicarse al combate directo. tiene un 100% de velocidad de movimiento, 125 puntos de vida (185 con sobrecuración), especializada en negación de área y en apoyo. El Engineer posee su PDA de construcción, el cual le permite construir tres tipos de armamentos: Una torreta sentinela que ataca a los enemigos cercanos a su radio, un dispensador de municion y salud para tus aliados, y un teletransportador de entrada y salida para transportar mas rapido a sus aliados. Todas estas construcciones pueden mejorarse hasta el nivel 3 usando metal, el cual se obtiene de las cajas de municion o los dispensadores, se acumula hasta un maximo de 200 de metal. Ademas de eso, el Engineer posee uan escopeta como arma primaria, una pistola como arma secundaria, y una llave inglesa como arma cuerpo a cuerpo, la cual tambien sirve para mejorar y reparar tus construcciones de daños, ademas de que tambien posee un PDA de destrucción.</p>
+            </div>
+            <img src="https://static.wikia.nocookie.net/villains/images/6/6d/Red_Engineer.png/revision/latest?cb=20200511073813" alt="Engineer" class="personaje-img">
+        </section>
+
+        <section id="medic">
+            <div class="info-text">
+                <h2>Medic</h2>
+                <p>El Medic es la primer clase de apoyo y la 7ma clase del juego. El Medic es un hombre teutón con una ética médica un tanto cuestionable, natural de Stuttgart, Alemania. A pesar de su peculiar interpretación de la medicina es la clase curativa del equipo. Posee un 107% de velocidad de movimiento, y  150 puntos de salud (225 con sobrecuración), que se enfoca en mantener a su equipo con vida y en mejorar su eficiencia. Sus puntos de salud se regeneran con el paso del tiempo. Posee una pistola de jeringas como arma primaria con 40 jeringas, una pistola medica (Medi-gun) la cual lanza un rayo curativo hacia un aliado y le proporciona curacion de salud y sobrecuracion, como arma secundaria, y una sierra o serrucho como arma cuerpo a cuerpo.</p>
+            </div>
+            <img src="https://static.wikia.nocookie.net/inconsistently-heinous/images/f/f0/Red_Medic.webp/revision/latest/scale-to-width/360?cb=20221113120114" alt="Medic" class="personaje-img">
+        </section>
+
+        <section id="sniper">
+            <div class="info-text">
+                <h2>Sniper</h2>
+                <p>El Sniper es la segunda clase de apoyo y la 8va del juego. Tirador robusto e inteligente procedente del país perdido de Nueva Zelanda y criado en Australia, el Sniper (de apellido Mundy, se desconoce su nombre de pila, aunque se sabe que su nombre de nacimiento es Mun-dee) prefiere elegir sus blancos a distancia, a pesar de que no teme ensuciarse las manos si la situación lo requiere. Prefiriendo esconderse en lugares elevados o difíciles de ver, el Sniper elimina clases lentas como el Heavy con facilidad. Posee un 100% de velocidad de movimiento, 125 puntos de salud (185 con sobrecuración), ideal para eliminar enemigos a larga distancia. Posee un Rifle de Sniper como arma primaria, el cual le permite hacer headshots haciendo daño critico, siendo el unico personaje capaz de hacer headshots (y el spy con un arma primaria que posee), ademas su rifle al apuntar tiene una barra de carga que mientras mas llena esté, mas daño va a causar, ademas de poder disparar sin apuntar (No Scope). De arma secundaria posee una metralleta (SMG), con 25 balas para atacar a corta y media distancia, y un kukri o machete de arma cuerpo a cuerpo.</p>
+            </div>
+            <img src="https://static.wikia.nocookie.net/villains/images/3/38/Red_Sniper.png/revision/latest?cb=20200430132310" alt="Sniper" class="personaje-img">
+        </section>
+
+        <section id="spy">
+            <div class="info-text">
+                <h2>Spy</h2>
+                <p>El Spy es la tercera clase de apoyo y la 9na y ultima clase del juego. El Spy procede de una región indeterminada de Francia, es un entusiasta de los trajes elegantes y los cuchillos afilados, maestro del sigilo y el engaño para ayudar al equipo. Cuenta con 107% de velocidad de movimiento, 125 puntos de salud (185 con sobrecuración), ideal para infiltrarse y eliminar a enemigos sigilosamente. Posee un revolver como arma primaria para defenderse, un zapeador de arma secundaria que le permite obstruir, detener y destruir las construcciónes de los engineers (estos pueden ser destruidos con dos golpes de llave inglesa), de arma cuerpo a cuerpo posee su cuchillo mariposa, el cual te permite hacer un backstab, osea, apuñalar por la espalda al enemigo, matandolo instantaneamente no importa cuanta salud tenga. Tambien posee un reloj de invisibilidad que se activa con el clic derecho, el cual te permite volverte invisible ante los enemigos para pasar por zonas sin ser detectado, pero cuidado, si te chocas con un enemigo, ellos podran verte transparente y puedes regenerar la invisibilidad con cajas de munición ya que no es infinita, y como ultima arma posee un kit de disfraces que permite convertirte y disfrazarte en cualquier clase enemiga para confundirlos, imitando sus pasos, voces, etc, aunque cuidado, si te transformas en el heavy o soldier correras mas lento, y si te conviertes en el Scout, no correras mas rapido.</p>
+            </div>
+            <img src="https://static.wikia.nocookie.net/villains/images/3/36/Spy.png/revision/latest/scale-to-width/360?cb=20170722075450" alt="Spy" class="personaje-img">
+        </section>
